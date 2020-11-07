@@ -1,0 +1,53 @@
+body {
+    background-color : #202020;
+    width:100%;
+
+}
+
+h1{
+    text-align : center;
+    color: rgba(220,220,220,1);
+    padding-top: 20%;
+}
+
+#nav {
+    text-align: center; /* centrer le texte */
+    background-color: rgba(220,220,220,1);
+
+}
+#nav li {
+    display: inline;
+    list-style: none;
+    border-color:#202020 ;
+}
+#nav a {
+    display:inline-block;
+    margin: 0 30px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.LeftSide{
+    float:left;
+    width:50%;
+}
+
+.RightSide {
+    margin-left:50%;
+    padding : 20px;
+}
+
+#image{
+    border-radius: 8px;
+    width: 215px;
+    height: 290px;
+}
+img:hover {
+    box-shadow:  0px 0px 10px 10px rgba(220,220,220,1);
+}
+
+#text{
+    padding-top: 10%;
+    color: rgba(220,220,220,1);
+}

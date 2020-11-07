@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+
+<head>
+	<title>Films</title>
+
+	<meta charset="UTF-8"/>
+	<meta name="author" content="JC Routier"/>
+
+	<link rel="stylesheet" type="text/css" href="style/style-projet2020.css"/>
+
+	<!-- pour utiliser le fichier de données fournis -->
+	<script src="data/film.js"></script>
+
+	<script src="scripts/project2020.js"></script>
+
+</head>
+
+<body >
+
+<div class="LeftSide">
+	<div id="sidenav">
+		<h2>Genres</h2>
+
+		<input type="text" id="genre" name="genre"  placeholder="Search for a Genre"/>
+		<div id="checks"></div>
+
+	</div>
+</div>
+
+<div class="RightSide">
+
+	<h1>Choisissez vos films</h1>
+	<div id="selection" class="block">
+		<h3>Mon top 2</h3>
+		<div id="select1"><span>1</span></div>
+		<div id="select2"><span>2</span></div>
+	</div>
+
+	<div class="block" id="catalog">
+		<input type="text" placeholder="filtrer les films" id="filter"/>
+		details ? <input type="checkbox" id="showDetails" checked="checked"/>
+
+		<div id="films"></div>
+
+		<div id="details"></div>
+	</div>
+
+</div>
+
+<!-- On ajoutant le fichier js avec la balise script, les méthodes ne sont pas exécuté (guide.txt) -->
+<script>
+	loading();
+	addEventSearch();
+	addEventClick();
+	addEventSearchGenre();
+	loadingGenre();
+	printSelectionFromStorage();
+</script>
+
+
+</body>
+</html>

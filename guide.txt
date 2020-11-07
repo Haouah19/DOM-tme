@@ -1,0 +1,102 @@
+Il s'agit d'un projet universitaire pour "Programmation Web - M1 MIAGE Paris-Dauphine" C'est un site de vidéothèque, il contient seulement "a client-side". 
+Authors : Ahmed HAOUILI & Riad FEZZOUA (M1-Groupe14-PW)
+IDE : WebStorm
+
+Structure du rendu :
+    -> data
+       |-> film.js
+    -> images
+       |-> l_empire_contre_attaque.jpg
+       |-> la_bataille_d_alger.jpg
+       |-> la_communaute_de_lanneau.jpg
+       |-> la_derniere_croisade.jpg
+       |-> la_guerre_des_etoiles.jpg
+       |-> le_retour_du_jedi.jpg
+       |-> le_retour_du_roi.jpg
+       |-> le_temple_maudit.jpg
+       |-> les_aventuriers_arche_perdue.jpg
+       |-> les_deux_tours.jpg
+    -> scripts
+       |-> project2020.js
+       |-> extra.js
+    -> style
+       |-> acceuil.css
+       |-> style-projet2020.css
+    -> guide.txt
+    -> acceuil.html
+    -> index.html
+    -> mini-projet-js-2020-static.html
+
+
+Ce fichier mentionne pour chacune des questions présente dans l'énoncé, si elle est traitée ou non et les problèmes de notre solution. 
+
+Question 3 :
+    - Etat : Réalisation à 100% 
+    - Fonctions : loading() (ligne 36),  createElement() (ligne 10)
+
+Question 4 :
+    - Etat : Réalisation à 100% 
+    - Ajout du film "La Bataille d'Alger", il figure bien dans catalogue
+
+Question 5 :
+    - Etat : Réalisation à 100% 
+    - Fonctions : addEventSearch() (linge 46) pour l'input filter & addEventSearchGenre() (ligne 185) pour l'input genre
+
+Question 6 :
+    - Etat : Réalisation à 100%
+    - Fonctions : displayTitres() (ligne 56) : filtre les films présents dans "Films", suivant le texte rentré par l'utilisateur 
+                  mouseOver() (ligne 95) : Affiche quand les détails quand la souris est sur le film
+                  mouseOut() (ligne 106) : Stoppe l'affichage quand la souris n'est plus présente sur film
+
+Question 7 :
+    - Etat : Réalisation à 100%
+    - Fonctions : mouseOver() (ligne 95) : Affiche les détails quand la souris est sur le film
+
+Question 8 :
+    - Etat : Réalisation à 100%
+    - Fonctions : mouseOut() (ligne 106) : Stoppe l'affichage quand la souris n'est plus présente sur film
+
+Question 9 :
+    - Etat : Réalisation à 100%
+    - Fonctions : selectFavori() (ligne 119) : sélectionne le film pour le placer dans les Favoris
+                  addEventClick() (ligne 154) : pour permettre la désélection des films de Favori 
+                  replaceFilm() (ligne 166) : permets de replacer un film présent dans favori vers la fin de #films
+                  putOnclick() (ligne 179) : permets de remettre en place le mecanisme de sélection d'un film vers les favoris
+                  printSelectionFromStorage() (ligne 291) :
+
+    - AMÉLIORATIONS : Stockage des favoris dans localStorage pour pouvoir les display même si la page est rechargée.
+                      Filtre par titre seulement sur les éléments présents dans #films et pas dans favori
+    PS : Nous aurions pu déplacer la selection 2 vers la selection 1 quand la selection 1 devient vide mais nous avons préféré le laisser comme ça, 
+         Un film à la selection 2 reste à la selection 2 car il a été choisi comme tel
+
+
+Pour les questions 10 & 11 :
+    - Modification du fichier style-projet2020.css pour permettre un meilleur rendu visuel.
+
+Question 10 :
+    - Etat : Réalisation à 100%
+    - Fonctions : loadingGenre() (ligne 213) : permets d'ajouter à la page Html les genres présents dans la base de films
+                  createGenres() (ligne 229) : crée le genre récupéré depuis la base film sur la page HTML
+                  getNbElements() (ligne 256) : récupère le nombre de films d'un genre particulier pour permettre un affichage comme suit genre(Nb_films_by_Genre)
+                  filtreByGenres() (ligne 271) :  
+
+Question 11 :
+    - Etat : Réalisation à 100%
+    - Fonctions : addEventSearchGenre() (ligne 185) : Ajoute un event keyUp à genre
+                  displayGenres() (ligne 194) : suivant l'event keyUp récupéré, affiche ou non, les films d'un genre.
+                 
+    Problème : Le filtre fonctionne normalement, c'est bien les films du genre écrits dans l'input qui s'affiche.
+               Le problème se situe quand on clique sur les checkbox d'un genre particulier, le filtre se fait sur tous les films présents dans films.
+               Mais le rendu final est le même, juste entre-temps, la visualisation est mauvaise 
+
+Question 12 (Extra) :
+    - Etat : Réalisation à 40%
+    - Ajout des fichiers acceuil.html, scripts/extra.js et style/acceuil.css
+    - Ajout d'une page acceuil avec un style qui suit index.html et amélioration du CSS.
+
+
+Problèmes sur l'emplcement du Js :
+-> En appelant les fonctions d'initilialisation depuis le fichier project2020.js à la fin ou au début, elles ne s'exécutent pas.
+-> En appelant les fonctions de loading() depuis body onload = function(), cela fonctionne, mais on modifie le code html 
+-> En appelant les fonctions depuis la fin du fichier html comme recommandé, dans une balise <script/>, cela fonctionne
+Nous ne savons pas quelle manière de faire est correcte, nous avons choisi celle qui fonctionne et qui est logique.
